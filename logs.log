@@ -1,0 +1,29 @@
+2023-11-17 18:35:37,773:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-17 18:35:37,774:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-17 18:35:37,774:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-17 18:35:37,774:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-17 18:35:38,251:INFO:PyCaret RegressionExperiment
+2023-11-17 18:35:38,251:INFO:Logging name: predictdays
+2023-11-17 18:35:38,251:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-11-17 18:35:38,251:INFO:version 3.2.0
+2023-11-17 18:35:38,251:INFO:Initializing setup()
+2023-11-17 18:35:38,251:INFO:self.USI: 90e2
+2023-11-17 18:35:38,251:INFO:self._variable_keys: {'USI', 'fold_generator', 'gpu_param', 'target_param', 'X_train', 'log_plots_param', 'fold_shuffle_param', '_available_plots', 'X', 'pipeline', 'gpu_n_jobs_param', 'exp_name_log', 'memory', 'transform_target_param', '_ml_usecase', 'fold_groups_param', 'y', 'idx', 'data', 'n_jobs_param', 'exp_id', 'y_train', 'html_param', 'seed', 'y_test', 'logging_param', 'X_test'}
+2023-11-17 18:35:38,251:INFO:Checking environment
+2023-11-17 18:35:38,251:INFO:python_version: 3.8.18
+2023-11-17 18:35:38,251:INFO:python_build: ('default', 'Sep 11 2023 08:17:33')
+2023-11-17 18:35:38,251:INFO:machine: x86_64
+2023-11-17 18:35:38,251:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-11-17 18:35:38,252:INFO:Memory: svmem(total=8589934592, available=543158272, percent=93.7, used=888733696, free=17408000, active=529018880, inactive=510763008, wired=359714816)
+2023-11-17 18:35:38,252:INFO:Physical Core: 8
+2023-11-17 18:35:38,252:INFO:Logical Core: 8
+2023-11-17 18:35:38,252:INFO:Checking libraries
+2023-11-17 18:35:38,252:INFO:System:
+2023-11-17 18:35:38,252:INFO:    python: 3.8.18 (default, Sep 11 2023, 08:17:33)  [Clang 14.0.6 ]
+2023-11-17 18:35:38,252:INFO:executable: /Users/dinorahgarciavasquez/opt/anaconda3/bin/python
+2023-11-17 18:35:38,252:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-11-17 18:35:38,252:INFO:PyCaret required dependencies:
