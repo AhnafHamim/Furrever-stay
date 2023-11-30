@@ -42,8 +42,12 @@ def main():
         prediction_labels = {0: 'staying less than a month', 1: 'staying more than a month'}
         human_readable_prediction = prediction_labels.get(prediction[0], 'Unknown')
 
-        # Display the prediction
-        st.success(f"The model predicts: {human_readable_prediction}")
+        # Determine the color based on the prediction
+        text_color = 'red' if prediction[0] == 1 else 'green'
+    
+        # Display the prediction with colored text using Markdown syntax
+        colored_text = f'<span style="color:{text_color}">{human_readable_prediction}</span>'
+        st.markdown(f'The model predicts: {colored_text}', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
