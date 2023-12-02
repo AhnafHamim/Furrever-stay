@@ -3,11 +3,11 @@ from joblib import load
 import pandas as pd
 
 # Load your trained model
-model = load("use_model.joblib")
+model = load("gb_model.joblib")
 
 
 def main():
-    st.title("Cat Shelter staying Prediction")
+    st.title("Cat Shelter Staying Quantitative Prediction")
 
     # User inputs through dropdown menus
     color_mapping = {"BLACK": 0, "GRAY": 1, "TABBY": 3, "WHITE": 4, "OTHER": 2}
@@ -19,8 +19,10 @@ def main():
         "UNDER WEIGHT": 5,
         "OTHER": 4,
     }
+    type_mapping = {0: 'OTHER', 1: 'OWNER SURRENDER', 2: 'STRAY'}
 
     color = st.selectbox("Color", options=list(color_mapping.keys()))
+    type = st.selectbox("Type", options=list(type_mapping.keys()))
     condition = st.selectbox("Condition", options=list(condition_mapping.keys()))
 
     # Use a slider for intake_age
@@ -30,9 +32,11 @@ def main():
         # Prepare the input for the model
         input_data = pd.DataFrame(
             {
-                "simplified_color_encoded": [color_mapping[color]],
+                
                 "simplified_condition_encoded": [condition_mapping[condition]],
+                "simplified_type_encoded":[type_mapping[type]],
                 "intake_age": [intake_age],
+                "simplified_color_encoded": [color_mapping[color]]
             }
         )
 
