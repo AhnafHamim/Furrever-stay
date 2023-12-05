@@ -4,8 +4,8 @@ from joblib import load
 import pandas as pd
 
 # Load both trained models (replace these lines with actual model loading)
-model1 = load("use_model.joblib")  # Model for >30 days or not
-model2 = load("gb_model.joblib")   # Model for quantitative prediction
+model1 = load("new_streamlit_app/use_model.joblib")  # Model for >30 days or not
+model2 = load("new_streamlit_app/gb_model.joblib")   # Model for quantitative prediction
 
 def main():
     st.title("Cat Shelter Staying Prediction - Dual Models")
