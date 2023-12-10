@@ -1,7 +1,9 @@
 # team-3
 **Link to live demo:** [link](https://furrever-stay.streamlit.app/)
 
-**Link to dataset:** [Link to project dataset](//add texas dataset link here)
+**Link to dataset:** [Austin Animal Center Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/about_data) |
+[Austin Animal Center Outcomes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/about_data)
+
 
 **Link to project description:** [link](https://hackmd.io/@H1rmcYbFSwOYUwgYururYA/Sk71PmXxT)
 
@@ -66,11 +68,15 @@ Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
 ```
 The user will input the characteristics of the cat by using the drop down menu on the website
 
-**gif of the action**
+
+![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
+
 
 After inputting the characteristics, the website will give the user a prediction of how long the cat will stay
 
-**gif of that happening**
+
+![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
+
 
 > Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
 
@@ -79,21 +85,27 @@ After inputting the characteristics, the website will give the user a prediction
 ```mermaid
 gantt
     dateFormat  YYYY-MM-DD
-    %% Add an additional space for better layout
     title A Gantt Diagram Of FurreverStay
 
     section Project
-    Conceptualization  :active, a1, 2023-10-01, 2023-10-14
-    Validation : active, a2, 2023-10-14, 2023-10-30
-    Development : active, a3, 2023-10-30, 30d
-    
+    Conceptualization           :active, a1, 2023-10-01, 2023-10-05
+    Data Collection             :active, a2, 2023-10-05, 2023-10-10
+    Data Cleaning and Visualization :active, a3, 2023-10-10, 2023-11-01
+    Model Development           :active, a4, 2023-11-01, after a3
+    Web Interface Development   :active, a4, 2023-12-01, 2023-12-05
 ```
 
-> Read more about mermaid here: http://mermaid-js.github.io/mermaid/
 
 ## Data Source
 
-the final dataset that worked the best for us, either texas, sonoma, long beach, etc.
+We used Austin Animal Center Intakes and Outcomes Dataset
+
+[Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/about_data)
+
+[Outcomes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/about_data)
+
+**Data Provided By
+City of Austin, Texas - data.austintexas.gov**
 
 ## Methodology
 Furrever Stay employs **"Random Forest algorithm"** to make prediction for flagging short or long stay of cat in the shelter and **"Gradiant Boost algorithm"** for predicting number of days staying in the shelter.
@@ -118,6 +130,8 @@ Furrever Stay employs **"Random Forest algorithm"** to make prediction for flagg
 
 ## Future Features
 Currently, our system allows users to input the characteristics of a single cat for analysis. However, our future objective is to enhance the functionality to process datasets provided by users, such as Excel files in CSV format, enabling the system to generate predictions and insights for multiple cats simultaneously. This expansion will offer users a more efficient experience.
+
+We are also planning to develop PawStay, which will be focused on dogs.
 
 license team-3
 
