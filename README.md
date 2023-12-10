@@ -13,7 +13,7 @@ Furrever Stay
 ===
 ![Furrever Stay (1)](https://hackmd.io/_uploads/B1M6_5LHT.png)
 
-<h2><b></b>No cat should be left without a loving home or end up being euthanized!</b></h2>
+<h2><b></b>Our motto is "No cat should be left without a loving home or end up being euthanized!"</b></h2>
 
 ## Table of Contents
 **[Overview and Objectives](#overview-and-objectives)**<br>
