@@ -78,7 +78,7 @@ After inputting the characteristics, the website will give the user a prediction
 ![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
 
 
-> Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
+
 
 ## Project Timeline
 ---
