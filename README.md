@@ -28,7 +28,7 @@ Furrever Stay
 
 ## Overview and Objectives
 
-Welcome to ***Furrever Stay***, a project designed to predict the duration a cat may spend in a shelter based on its traits. Our objective is to flag cats at risk, allowing shelters to prioritize those at risk of extended shelter stays for adoption, thereby contributing to the overall well-being of sheltered animals. Inspired by the research paper ["Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation"](https://https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2) <span style="color: #e75480;">Furrever Stay</span> aims to enhance the adoption process at animal shelters.
+Welcome to ***Furrever Stay***, a project designed to predict the duration a cat may spend in a shelter based on its traits. Our objective is to flag cats at risk, allowing shelters to prioritize those at risk of extended shelter stays for adoption, thereby contributing to the overall well-being of sheltered animals. Inspired by the research paper ["Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation"](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2) <span style="color: #e75480;">Furrever Stay</span> aims to enhance the adoption process at animal shelters.
 
 **Project Objectives**
 * Predict a cat's stay duration in a shelter using individual traits.
@@ -96,9 +96,14 @@ gantt
 the final dataset that worked the best for us, either texas, sonoma, long beach, etc.
 
 ## Methodology
-Furrever Stay employs a predictive modeling approach inspired by the research paper "Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation." This methodology involves analyzing individual traits of cats to create a predictive model for shelter stay duration.
+Furrever Stay employs **"Random Forest algorithm"** to make prediction for flagging short or long stay of cat in the shelter and **"Gradiant Boost algorithm"** for predicting number of days staying in the shelter.
 
-**Model used name**
+<p><img width="828" alt="Screenshot 2023-12-10 at 4 23 52 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/39e8b464-25a7-4e7b-a8ac-ab90e3262aeb"></p>
+
+<p><img width="1297" alt="Screenshot 2023-12-10 at 4 24 15 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/a127f5cb-92cf-45dd-92c3-5f998ad54bb7"></p>
+
+<p><img width="1265" alt="Screenshot 2023-12-10 at 4 24 42 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/55e26a65-436a-40a7-b80f-0780d7410549"></p>
+
 
 ## Expected Outcomes
 * Identification of factors influencing cat shelter stay durations.
