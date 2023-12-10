@@ -1,7 +1,7 @@
 # team-3
 **Link to live demo:** [link](https://furrever-stay.streamlit.app/)
 
-**Link to dataset:** [Link to project dataset](https://data.longbeach.gov/explore/dataset/animal-shelter-intakes-and-outcomes/table/?flg=en-us&disjunctive.animal_type&disjunctive.primary_color&disjunctive.sex&disjunctive.intake_cond&disjunctive.intake_type&disjunctive.reason&disjunctive.outcome_type&disjunctive.outcome_subtype&disjunctive.intake_is_dead&disjunctive.outcome_is_dead&sort=-outcome_date&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQ09VTlQiLCJ5QXhpcyI6ImFnZSIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6InJhbmdlLWN1c3RvbSIsInBvc2l0aW9uIjoiY2VudGVyIn1dLCJ4QXhpcyI6ImludGFrZV9kYXRlIiwibWF4cG9pbnRzIjpudWxsLCJ0aW1lc2NhbGUiOiJtb250aCIsInNvcnQiOiIiLCJzZXJpZXNCcmVha2Rvd25UaW1lc2NhbGUiOiIiLCJzZXJpZXNCcmVha2Rvd24iOiJpbnRha2VfaXNfZGVhZCIsInN0YWNrZWQiOiJub3JtYWwiLCJjb25maWciOnsiZGF0YXNldCI6ImFuaW1hbC1zaGVsdGVyLWludGFrZXMtYW5kLW91dGNvbWVzIiwib3B0aW9ucyI6eyJmbGciOiJlbi11cyIsImRpc2p1bmN0aXZlLmFuaW1hbF90eXBlIjp0cnVlLCJkaXNqdW5jdGl2ZS5wcmltYXJ5X2NvbG9yIjp0cnVlLCJkaXNqdW5jdGl2ZS5zZXgiOnRydWUsImRpc2p1bmN0aXZlLmludGFrZV9jb25kIjp0cnVlLCJkaXNqdW5jdGl2ZS5pbnRha2VfdHlwZSI6dHJ1ZSwiZGlzanVuY3RpdmUucmVhc29uIjp0cnVlLCJkaXNqdW5jdGl2ZS5vdXRjb21lX3R5cGUiOnRydWUsImRpc2p1bmN0aXZlLm91dGNvbWVfc3VidHlwZSI6dHJ1ZSwiZGlzanVuY3RpdmUuaW50YWtlX2lzX2RlYWQiOnRydWUsImRpc2p1bmN0aXZlLm91dGNvbWVfaXNfZGVhZCI6dHJ1ZX19fV0sImRpc3BsYXlMZWdlbmQiOnRydWUsImFsaWduTW9udGgiOnRydWUsInRpbWVzY2FsZSI6IiJ9&refine.animal_type=CAT&q.to_date.intake_date=intake_date%3C%3D%222023-10-21%22)
+**Link to dataset:** [Link to project dataset](//add texas dataset link here)
 
 **Link to project description:** [link](https://hackmd.io/@H1rmcYbFSwOYUwgYururYA/Sk71PmXxT)
 
@@ -13,7 +13,7 @@ Furrever Stay
 ===
 ![Furrever Stay (1)](https://hackmd.io/_uploads/B1M6_5LHT.png)
 
-
+<h2><b></b>No cat should be left without a loving home or end up being euthanized!</b></h2>
 
 ## Table of Contents
 **[Overview and Objectives](#overview-and-objectives)**<br>
@@ -28,21 +28,32 @@ Furrever Stay
 
 ## Overview and Objectives
 
-Welcome to <span style="color: #e75480;">Furrever Stay</span>, a project designed to predict the duration a cat may spend in a shelter based on its individual traits. Our objective is to prioritize cats at risk of extended shelter stays for adoption, contributing to the overall well-being of sheltered animals. Inspired by the research paper ["Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation"](https://https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2) <span style="color: #e75480;">Furrever Stay</span> aims to enhance the adoption process at animal shelters.
+Welcome to ***Furrever Stay***, a project designed to predict the duration a cat may spend in a shelter based on its traits. Our objective is to flag cats at risk, allowing shelters to prioritize those at risk of extended shelter stays for adoption, thereby contributing to the overall well-being of sheltered animals. Inspired by the research paper ["Increasing adoption rates at animal shelters: a two-phase approach to predict length of stay and optimal shelter allocation"](https://https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2) <span style="color: #e75480;">Furrever Stay</span> aims to enhance the adoption process at animal shelters.
 
 **Project Objectives**
-* Predict the duration a cat may spend in a shelter using individual traits.
-* Help shelters prioritize cats with a higher risk of extended shelter stays for adoption.
+* Predict a cat's stay duration in a shelter using individual traits.
+* Assist shelters in prioritizing cats with a higher risk of extended shelter stays for adoption.
 
-<span style="color: red;">**No cat should be left without a loving home or end up being euthanized!**</span>
 
 ## Motivation 
-Animal shelters grapple with the task of optimally distributing resources to care for and rehome animals. In response to this challenge, <span style="color: #e75480;">Furrever Stay</span> has emerged with a mission to enhance efficiency by forecasting the duration of a cat's stay and prioritizing those at risk of prolonged residency. By strategically identifying and prioritizing cats during adoption events, we aim to empower shelter caretakers to focus their efforts where they are most needed. Recognizing the limitations on caretaker capacities, this approach not only aids in resource allocation but also significantly boosts adoption rates, ensuring that more cats find their forever homes
+According to ["Euthanasia in Animal Shelters: Management's Perspective on Staff Reactions and Support Programs"](https://www.tandfonline.com/doi/abs/10.2752/175303713X13795775536057), published online on April 28, 2015, about 6–8 million dogs and cats enter animal shelters every year, and 3–4 million of those animals are euthanized. In other words, approximately 50% of the total canines and felines that enter animal shelters are put to death annually. Moreover, 10–25% of the total euthanized population in the United States is explicitly euthanized because of shelter overcrowding each year ["source"](https://jvme.utpjournals.press/doi/10.3138/jvme.30.4.372). 
 
-**As Shown In this graph taken from City of Long Beach Animal Shelter Data, there is an increase of over 2000 cats from 2022 to 2023. Shelters are overcapacity.**
+Even though both cats and dogs are at risk of not getting adopted, for the sake of time and complexity, we will only work with cats for our project at this moment. 
+On February 5, 2021,["BMC Veterinary Research"](https://bmcvetres.biomedcentral.com/articles/10.1186/s12917-020-02728-2/figures/3) conducted further evaluation and found that about 24% of cats taken into the shelter were euthanized.
 
-![Screenshot 2023-11-30 at 6.52.43 PM](https://hackmd.io/_uploads/ByFpxiLrT.png)
-Source: [City of Long Beach Animal Care Services](https://tinyurl.com/2zy4bjuy)
+<p><img width="1286" alt="Screenshot 2023-12-10 at 12 41 31 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/ac445de9-b55d-4470-9350-8d9453c45cb4"></p>
+
+As mentioned above, most euthanasia is done because of shelter overcrowding. When we analyzed ["Sonoma county shelter data"](https://data.sonomacounty.ca.gov/d/924a-vesw/visualization) and ["Long Beach City Shelter data"](https://tinyurl.com/ypt3hdw6), we found that the number of cats taken in has almost doubled from 2020 to 2023. 
+
+<p><h4>From Sonoma County Shelter Data:</h4>
+<img width="723" alt="Screenshot 2023-12-10 at 1 48 36 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/746ec6ff-bc5b-4b91-96c5-f34aabec52ea">
+</p>
+<p><h4>From Long Beach City Shelter Data:</h4>
+<img width="1069" alt="Screenshot 2023-12-10 at 1 58 34 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/6fc5c26b-8167-401f-925d-4170ccb14ed6">
+</p>
+ 
+This trend of an increased number of cats is common for almost all shelters. Overcrowded shelters are harmful for both shelters and cats. Due to the increased number of cats, the cost of maintenance has risen, and because of that, cats are not getting proper care. Animal shelters grapple with optimally distributing resources to care for and rehome animals. In response to this challenge, **Furrever** Stay has emerged with a mission to enhance efficiency by forecasting the duration of a cat's stay and prioritizing those at risk of prolonged residency. By strategically identifying and prioritizing cats during adoption events, we aim to empower shelter caretakers to focus their efforts where they are most needed. Recognizing the limitations on caretaker capacities, this approach not only aids in resource allocation but also significantly boosts adoption rates, ensuring that more cats find their forever homes.
+
  
 ## User flows
 ---
