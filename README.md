@@ -92,7 +92,7 @@ City of Austin, Texas - data.austintexas.gov**
 * Evaluate model performance and fine-tune as needed.
 
 ## Methodology
-Furrever Stay employs **"Random Forest algorithm"** to make predictions for flagging short or long stays of cats in the shelter and **"Gradient Boost algorithm"** for predicting the number of days staying in the shelter.
+Furrever Stay employs **"Random Forest Classification algorithm"** to make predictions for flagging short or long stays of cats in the shelter and **"Gradient Boost Regression algorithm"** for predicting the number of days staying in the shelter.
 
 <p><img width="828" alt="Screenshot 2023-12-10 at 4 23 52 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/39e8b464-25a7-4e7b-a8ac-ab90e3262aeb"></p>
 
