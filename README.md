@@ -60,23 +60,27 @@ This trend of an increased number of cats is common for almost all shelters. Ove
  
 ## Project Timeline
 ---
-```mermaid
+<img width="1283" alt="gantt chart" src="https://github.com/AhnafHamim/team-3/assets/64384070/ce63f470-08e4-4b77-827b-102ee791a073">
+
+<!--```mermaid
 gantt
     dateFormat  YYYY-MM-DD
     title A Gantt Diagram Of FurreverStay
 
     section Project
-    Conceptualization           :done, a1, 2023-10-01, 2023-10-05
-    Data Collection             :done, a2, 2023-10-05, 2023-10-10
-    Data Cleaning and Visualization :done, a3, 2023-10-10, 2023-11-01
-    Model Development           :active, a4, 2023-11-01, 2023-12-03
-    Web Interface Development   :active, a4, 2023-12-03, 2023-12-11
+    Conceptualization:done, a1, 2023-10-01, 2023-10-06
+    Data Collection: done, a2, 2023-10-06, 2023-10-11
+    Data Cleaning and Visualization: done, a3, 2023-10-12, 2023-11-01
+    Model Development: done, a4, 2023-11-01, 2023-11-15
+    Re-collection of data and cleaning: done, a5, 2023-11-15, 2023-11-25
+    Re-Development model: done, a6, 2023-11-25, 2023-12-03
+    Web Interface Development: active, a7, 2023-12-03, 2023-12-11
 ```
-
+-->
 
 ## Data Source
 
-We used Austin Animal Center Intakes and Outcomes Dataset
+We used the Austin Animal Center Intakes and Outcomes Dataset
 
 [Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/about_data)
 
