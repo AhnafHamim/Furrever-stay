@@ -66,11 +66,11 @@ gantt
     title A Gantt Diagram Of FurreverStay
 
     section Project
-    Conceptualization           :active, a1, 2023-10-01, 2023-10-05
-    Data Collection             :active, a2, 2023-10-05, 2023-10-10
-    Data Cleaning and Visualization :active, a3, 2023-10-10, 2023-11-01
-    Model Development           :active, a4, 2023-11-01, after a3
-    Web Interface Development   :active, a4, 2023-12-01, 2023-12-05
+    Conceptualization           :done, a1, 2023-10-01, 2023-10-05
+    Data Collection             :done, a2, 2023-10-05, 2023-10-10
+    Data Cleaning and Visualization :done, a3, 2023-10-10, 2023-11-01
+    Model Development           :active, a4, 2023-11-01, 2023-12-03
+    Web Interface Development   :active, a4, 2023-12-03, 2023-12-11
 ```
 
 
