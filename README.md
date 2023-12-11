@@ -57,29 +57,6 @@ As mentioned above, most euthanasia is done because of shelter overcrowding. Whe
 This trend of an increased number of cats is common for almost all shelters. Overcrowded shelters are harmful for both shelters and cats. Due to the increased number of cats, the cost of maintenance has risen, and because of that, cats are not getting proper care. Animal shelters grapple with optimally distributing resources to care for and rehome animals. In response to this challenge, **Furrever** Stay has emerged with a mission to enhance efficiency by forecasting the duration of a cat's stay and prioritizing those at risk of prolonged residency. By strategically identifying and prioritizing cats during adoption events, we aim to empower shelter caretakers to focus their efforts where they are most needed. Recognizing the limitations on caretaker capacities, this approach not only aids in resource allocation but also significantly boosts adoption rates, ensuring that more cats find their forever homes.
 
  
-## User flows
----
-
-``` mermaid
-graph TD;
-Data-->Model_makes_prediction;
-Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
-
-```
-The user will input the characteristics of the cat by using the drop down menu on the website
-
-
-![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
-
-
-After inputting the characteristics, the website will give the user a prediction of how long the cat will stay
-
-
-![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
-
-
-
-
 ## Project Timeline
 ---
 ```mermaid
@@ -126,6 +103,26 @@ Furrever Stay employs **"Random Forest algorithm"** to make predictions for flag
 ## Expected Outcomes
 * Identification of factors influencing cat shelter stay durations.
 * A predictive model for estimating the length of stay for individual cats.
+
+## User flows
+---
+
+``` mermaid
+graph TD;
+Data-->Model_makes_prediction;
+Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
+
+```
+The user will input the characteristics of the cat by using the drop down menu on the website
+
+
+![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
+
+
+After inputting the characteristics, the website will give the user a prediction of how long the cat will stay
+
+
+![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
 
 ## Future Features
 Currently, our system allows users to input the characteristics of a single cat for analysis. However, our future objective is to enhance the functionality to process datasets provided by users, such as Excel files in CSV format, enabling the system to generate predictions and insights for multiple cats simultaneously. This expansion will offer users a more efficient experience.
