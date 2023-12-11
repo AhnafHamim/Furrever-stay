@@ -107,8 +107,14 @@ We used Austin Animal Center Intakes and Outcomes Dataset
 **Data Provided By
 City of Austin, Texas - data.austintexas.gov**
 
+## Implementation Plan
+* Conduct exploratory data analysis on shelter records.
+* Preprocess data for model training.
+* Train predictive models based on the two-phase approach.
+* Evaluate model performance and fine-tune as needed.
+
 ## Methodology
-Furrever Stay employs **"Random Forest algorithm"** to make prediction for flagging short or long stay of cat in the shelter and **"Gradiant Boost algorithm"** for predicting number of days staying in the shelter.
+Furrever Stay employs **"Random Forest algorithm"** to make predictions for flagging short or long stays of cats in the shelter and **"Gradient Boost algorithm"** for predicting the number of days staying in the shelter.
 
 <p><img width="828" alt="Screenshot 2023-12-10 at 4 23 52 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/39e8b464-25a7-4e7b-a8ac-ab90e3262aeb"></p>
 
@@ -120,13 +126,6 @@ Furrever Stay employs **"Random Forest algorithm"** to make prediction for flagg
 ## Expected Outcomes
 * Identification of factors influencing cat shelter stay durations.
 * A predictive model for estimating the length of stay for individual cats.
-
-## Implementation Plan
-* Conduct exploratory data analysis on shelter records.
-* Preprocess data for model training.
-* Train predictive models based on the two-phase approach.
-* Evaluate model performance and fine-tune as needed.
-
 
 ## Future Features
 Currently, our system allows users to input the characteristics of a single cat for analysis. However, our future objective is to enhance the functionality to process datasets provided by users, such as Excel files in CSV format, enabling the system to generate predictions and insights for multiple cats simultaneously. This expansion will offer users a more efficient experience.
