@@ -21,12 +21,13 @@ Furrever Stay
 ## Table of Contents
 **[Overview and Objectives](#overview-and-objectives)**<br>
 **[Motivation](#motivation)**<br>
-**[User Flows](#user-flows)**<br>
 **[Project Timeline](#project-timeline)**<br>
 **[Data Source](#data-source)**<br>
+**[Implementation Plan](#implementation-plan)**<br>
 **[Methodology](#methodology)**<br>
 **[Expected Outcomes](#expected-outcomes)**<br>
-**[Implementation Plan](#implementation-plan)**<br>
+**[Models Result](#models-result)**<br>
+**[User Flows](#user-flows)**<br>
 **[Future Features](#future-features)**<br>
 
 ## Overview and Objectives
@@ -55,7 +56,7 @@ As mentioned above, most euthanasia is done because of shelter overcrowding. Whe
 <img width="1069" alt="Screenshot 2023-12-10 at 1 58 34 AM" src="https://github.com/AhnafHamim/team-3/assets/64384070/6fc5c26b-8167-401f-925d-4170ccb14ed6">
 </p>
  
-This trend of an increased number of cats is common for almost all shelters. Overcrowded shelters are harmful for both shelters and cats. Due to the increased number of cats, the cost of maintenance has risen, and because of that, cats are not getting proper care. Animal shelters grapple with optimally distributing resources to care for and rehome animals. In response to this challenge, **Furrever** Stay has emerged with a mission to enhance efficiency by forecasting the duration of a cat's stay and prioritizing those at risk of prolonged residency. By strategically identifying and prioritizing cats during adoption events, we aim to empower shelter caretakers to focus their efforts where they are most needed. Recognizing the limitations on caretaker capacities, this approach not only aids in resource allocation but also significantly boosts adoption rates, ensuring that more cats find their forever homes.
+This trend of an increased number of cats is common for almost all shelters. Overcrowded shelters are harmful for both shelters and cats. Due to the increased number of cats, the maintenance cost has risen, and because of that, cats are not getting proper care. Animal shelters grapple with optimally distributing resources to care for and rehome animals. In response to this challenge, **Furrever** Stay has emerged with a mission to enhance efficiency by forecasting the duration of a cat's stay and prioritizing those at risk of prolonged residency. By strategically identifying and prioritizing cats during adoption events, we aim to empower shelter caretakers to focus their efforts where they are most needed. Recognizing the limitations of caretaker capacities, this approach not only aids in resource allocation but also significantly boosts adoption rates, ensuring that more cats find their forever homes.
 
  
 ## Project Timeline
@@ -72,7 +73,7 @@ gantt
     Data Collection: done, a2, 2023-10-06, 2023-10-11
     Data Cleaning and Visualization: done, a3, 2023-10-12, 2023-11-01
     Model Development: done, a4, 2023-11-01, 2023-11-15
-    Re-collection of data and cleaning: done, a5, 2023-11-15, 2023-11-25
+    Recollection of data and cleaning: done, a5, 2023-11-15, 2023-11-25
     Re-Development model: done, a6, 2023-11-25, 2023-12-03
     Web Interface Development: active, a7, 2023-12-03, 2023-12-11
 ```
@@ -109,6 +110,75 @@ Furrever Stay employs **"Random Forest Classification algorithm"** to make predi
 * Identification of factors influencing cat shelter stay durations.
 * A predictive model for estimating the length of stay for individual cats.
 
+## Models Result:
+  ### Randomforest Classification Model results: 
+    RandomForestClassifier(max_depth=10, max_features='log2', max_leaf_nodes=10)
+    Accuracy Score: 0.728988
+    Precision Score: 0.725073
+    Recall Score: 0.710626
+    F1 Score: 0.717777
+    AUC Score: 0.795007
+  
+  ### Randomforest Classification model Feature importance:
+    age_intake_months                 0.503119
+    intake_type_owner_surrender       0.149766
+    intake_type_stray                 0.114912
+    intake_condition_normal           0.092639
+    intake_condition_nursing          0.084116
+    intake_condition_neonatal         0.028981
+    intake_condition_injured          0.011893
+    intake_condition_sick             0.008639
+    breed_domestic_shorthair          0.001022
+    coatcolor_brown                   0.000935
+    breed_domestic_shorthair_mix      0.000913
+    coatcolor_black                   0.000606
+    coatcolor_orange                  0.000399
+    sex_intake_female                 0.000316
+    coatcolor_white_mix               0.000304
+    coatcolor_tortie_or_tortie_mix    0.000302
+    coatpattern_tabby                 0.000278
+    coatpattern_solid                 0.000268
+    coatcolor_torbie_or_torbie_mix    0.000247
+    coatcolor_black_n_white           0.000134
+    coatcolor_calico_or_calico_mix    0.000104
+    intake_condition_pregnant         0.000054
+    sex_intake_male                   0.000053
+  
+  ### Confusion Matrix for Randomforest Classification model:
+   ![img](https://github.com/AhnafHamim/team-3/assets/64384070/a1c7e2a4-48f9-4f2d-8ca0-e076e4b96cbd)
+
+### Gradient boosting Regression Model results: 
+    Root Mean Squared Error: 22.348138048104804
+    Mean Absolute Error: 17.63593795727246
+    R-squared Score: 0.278719
+    Adjusted R-squared Score: 0.277662
+
+### Gradient boosting Regression model Feature importance:
+    age_intake_months                 0.847322
+    intake_condition_normal           0.034542
+    intake_type_owner_surrender       0.031185
+    intake_type_stray                 0.017724
+    breed_domestic_shorthair          0.011614
+    intake_condition_nursing          0.009528
+    breed_domestic_shorthair_mix      0.009206
+    coatcolor_brown                   0.007624
+    coatpattern_tabby                 0.005838
+    coatcolor_black                   0.005390
+    sex_intake_male                   0.003201
+    coatpattern_solid                 0.003009
+    coatcolor_black_n_white           0.002613
+    sex_intake_female                 0.002109
+    coatcolor_white_mix               0.001637
+    coatcolor_tortie_or_tortie_mix    0.001468
+    intake_condition_injured          0.001384
+    coatcolor_calico_or_calico_mix    0.001108
+    coatcolor_blue                    0.000791
+    intake_condition_sick             0.000776
+    intake_condition_neonatal         0.000763
+    intake_condition_pregnant         0.000584
+    coatcolor_torbie_or_torbie_mix    0.000480
+    intake_condition_aged             0.000105
+
 ## User flows
 ---
 
@@ -118,7 +188,7 @@ Data-->Model_makes_prediction;
 Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
 
 ```
-The user will input the characteristics of the cat by using the drop down menu on the website
+The user will input the characteristics of the cat by using the drop-down menu on the website
 
 
 ![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
