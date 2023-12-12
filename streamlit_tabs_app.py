@@ -71,7 +71,7 @@ def main():
         coat_color1 = st.selectbox("Coat Color", options=list(CoatColor_mapping.keys()),key="color1")
         coat_pattern1 = st.selectbox("Coat Pattern", options=list(CoatPattern_mapping.keys()),key="pattern1")
         # Use a slider for intake_age
-        intake_age1 = st.slider("Intake Age", min_value=0, max_value=20, value=1, key="slider1")
+        intake_age1 = st.slider("Intake Age in Months", min_value=0, max_value=240, value=1, key="slider1")
 
         if st.button("Predict", key="button1"):
             # Prepare the input for the model
@@ -115,7 +115,7 @@ def main():
         coat_color2 = st.selectbox("Coat Color", options=list(CoatColor_mapping.keys()))
 
         # Use a slider for intake_age
-        intake_age2 = st.slider("Intake Age", min_value=0, max_value=20, value=1, key="slider2")
+        intake_age2 = st.slider("Intake Age", min_value=0, max_value=240, value=1, key="slider2")
         
         if st.button("Predict",key="button2"):
                 # Prepare the input for the model
@@ -189,25 +189,51 @@ def main():
             'Tabby': 2
         }
         st.header("CSV-based Prediction")
+        st.subheader("Accepted CSV Format Example:")
+        st.text("Your CSV file should match the following format:")
+        st.image("./new_streamlit_app/Sample CSV Layout.png", caption='CSV Format Example')
+
+        st.subheader("Expected Values for Each Column:")
+        st.write("Intake Type:", ', '.join(intake_type_mapping.keys()))
+        st.write("Intake Condition:", ', '.join(intake_condition_mapping.keys()))
+        st.write("Sex at Intake:", ', '.join(sex_intake_mapping.keys()))
+        st.write("Breed:", ', '.join(breed_mapping.keys()))
+        st.write("Coat Color:", ', '.join(CoatColor_mapping.keys()))
+        st.write("Coat Pattern:", ', '.join(CoatPattern_mapping.keys()))
+
+        st.info("""
+            If the values in your CSV file do not match the expected values listed above, 
+            they will be treated as 'Other'. Please note that using 'Other' for many entries 
+            might lead to less accurate predictions, as 'Other' is a general category that 
+            does not provide specific information.
+        """)
+
         uploaded_file = st.file_uploader("Upload your CSV file", type="csv")
         if uploaded_file is not None:
             data = pd.read_csv(uploaded_file)
 
-            data['intake_type_encoded'] = data['intake_type'].map(intake_type_mapping)
-            data['intake_condition_encoded'] = data['intake_condition'].map(intake_condition_mapping)
-            data['breed_encoded'] = data['breed'].map(breed_mapping)
-            data['CoatColor_encoded'] = data['CoatColor'].map(CoatColor_mapping)
+            data['intake_type_encoded'] = data['intake_type'].apply(lambda x: intake_type_mapping.get(x, intake_type_mapping['Other']))
+            data['intake_condition_encoded'] = data['intake_condition'].apply(lambda x: intake_condition_mapping.get(x, intake_condition_mapping['Other']))
+            data['breed_encoded'] = data['breed'].apply(lambda x: breed_mapping.get(x, breed_mapping['Other']))
+            data['CoatColor_encoded'] = data['CoatColor'].apply(lambda x: CoatColor_mapping.get(x, CoatColor_mapping['Other']))
             data['age_intake_months'] = pd.to_numeric(data['age_intake_months'], errors='coerce')
 
+            data = data.dropna()
 
-            prediction_input = data[['age_intake_months','intake_type_encoded', 'intake_condition_encoded',  'CoatColor_encoded','breed_encoded' ]]
+            required_columns = ['age_intake_months', 'intake_type_encoded', 'intake_condition_encoded','CoatColor_encoded', 'breed_encoded'   ]
+            if not all(column in data.columns for column in required_columns):
+                st.error("The uploaded CSV is missing one or more required columns.")
+            else:
+                # Proceed with prediction since all required columns are present
+                prediction_input = data[required_columns]
+                data['predicted_days'] = model2.predict(prediction_input).round(0).astype(int)
 
-            data['predicted_days'] = model2.predict(prediction_input).round(0)
+                # Create the output data excluding encoded columns
+                output_data_columns = ['animal id', 'intake_type', 'intake_condition', 'sex_intake', 'breed', 'CoatColor', 'CoatPattern', 'age_intake_months', 'predicted_days']
+                output_data = data[output_data_columns]
 
-            output_data = data[['animal id', 'intake_type', 'intake_condition', 'sex_intake', 
-                            'breed', 'CoatColor', 'CoatPattern', 'age_intake_months', 'predicted_days']]
-
-            st.dataframe(output_data)
+                # Display the DataFrame with the predictions
+                st.dataframe(output_data)
 
 if __name__ == "__main__":
     main()
