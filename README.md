@@ -81,7 +81,7 @@ gantt
 
 ## Data Source
 
-We used the Austin Animal Center Intakes and Outcomes Dataset
+We used the Austin Animal Center Intakes and Outcomes Dataset for our model creation & analysis
 
 [Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/about_data)
 
