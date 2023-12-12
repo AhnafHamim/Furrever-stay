@@ -11,7 +11,7 @@ def main():
     st.title("Cat Shelter Staying Prediction - Dual Models")
 
     # Create tabs for each model
-    tab1, tab2 = st.tabs(["Model 1: >30 Days Prediction", "Model 2: Quantitative Prediction"])
+    tab1, tab2, tab3 = st.tabs(["Model 1: >30 Days Prediction", "Model 2: Quantitative Prediction", "CSV File Upload"])
 
     intake_type_mapping = {
         'Other': 0,
@@ -140,6 +140,74 @@ def main():
                 f'<span style="color:{text_color};font-size:35px">The model predicts: {predicted_days} days</span>'
             )
             st.markdown(f"{colored_text}", unsafe_allow_html=True)
+    
+    with tab3:
+        intake_type_mapping = {
+        'Other': 0,
+        'Owner_Surrender': 1,
+        'Stray': 2
+        }
+
+        intake_condition_mapping = {
+            'Aged': 0,
+            'Injured': 1,
+            'Neonatal': 2,
+            'Normal': 3,
+            'Nursing': 4,
+            'Other': 5,
+            'Pregnant': 6,
+            'Sick': 7
+        }
+
+        sex_intake_mapping = {
+            'Female': 0,
+            'Male': 1
+        }
+
+        breed_mapping = {
+            'Domestic_Shorthair': 0,
+            'Domestic_Shorthair_Mix': 1,
+            'Other': 2
+        }
+
+        CoatColor_mapping = {
+            'Black': 0,
+            'Black_N_White': 1,
+            'Blue': 2,
+            'Brown': 3,
+            'Calico_or_Calico_mix': 4,
+            'Orange': 5,
+            'Other': 6,
+            'Torbie_or_Torbie_mix': 7,
+            'Tortie_or_Tortie_mix': 8,
+            'White_Mix': 9
+        }
+
+        CoatPattern_mapping = {
+            'Other': 0,
+            'Solid': 1,
+            'Tabby': 2
+        }
+        st.header("CSV-based Prediction")
+        uploaded_file = st.file_uploader("Upload your CSV file", type="csv")
+        if uploaded_file is not None:
+            data = pd.read_csv(uploaded_file)
+
+            data['intake_type_encoded'] = data['intake_type'].map(intake_type_mapping)
+            data['intake_condition_encoded'] = data['intake_condition'].map(intake_condition_mapping)
+            data['breed_encoded'] = data['breed'].map(breed_mapping)
+            data['CoatColor_encoded'] = data['CoatColor'].map(CoatColor_mapping)
+            data['age_intake_months'] = pd.to_numeric(data['age_intake_months'], errors='coerce')
+
+
+            prediction_input = data[['age_intake_months','intake_type_encoded', 'intake_condition_encoded',  'CoatColor_encoded','breed_encoded' ]]
+
+            data['predicted_days'] = model2.predict(prediction_input).round(0)
+
+            output_data = data[['animal id', 'intake_type', 'intake_condition', 'sex_intake', 
+                            'breed', 'CoatColor', 'CoatPattern', 'age_intake_months', 'predicted_days']]
+
+            st.dataframe(output_data)
 
 if __name__ == "__main__":
     main()
