@@ -112,10 +112,11 @@ def main():
         intake_type2 = st.selectbox("Intake Type", options=list(intake_type_mapping.keys()))
         intake_condition2 = st.selectbox("Intake Condition", options=list(intake_condition_mapping.keys()))
         breed2 = st.selectbox("Breed", options=list(breed_mapping.keys()))
+        coat_pattern2 = st.selectbox("Coat Pattern", options=list(CoatPattern_mapping.keys()),key="pattern2")
         coat_color2 = st.selectbox("Coat Color", options=list(CoatColor_mapping.keys()))
 
         # Use a slider for intake_age
-        intake_age2 = st.slider("Intake Age", min_value=0, max_value=240, value=1, key="slider2")
+        intake_age2 = st.slider("Intake Age in months", min_value=0, max_value=240, value=1, key="slider2")
         
         if st.button("Predict",key="button2"):
                 # Prepare the input for the model
@@ -125,6 +126,7 @@ def main():
                     "intake_type_encoded": [intake_type_mapping[intake_type2]],
                     "intake_condition_encoded": [intake_condition_mapping[intake_condition2]],
                     "CoatColor_encoded": [CoatColor_mapping[coat_color2]],
+                    "CoatPattern_encoded": [CoatPattern_mapping[coat_pattern2]],
                     "breed_encoded": [breed_mapping[breed2]]
                 })
 
@@ -216,11 +218,12 @@ def main():
             data['intake_condition_encoded'] = data['intake_condition'].apply(lambda x: intake_condition_mapping.get(x, intake_condition_mapping['Other']))
             data['breed_encoded'] = data['breed'].apply(lambda x: breed_mapping.get(x, breed_mapping['Other']))
             data['CoatColor_encoded'] = data['CoatColor'].apply(lambda x: CoatColor_mapping.get(x, CoatColor_mapping['Other']))
+            data['CoatPattern_encoded'] = data['CoatPattern'].apply(lambda x: CoatPattern_mapping.get(x, CoatPattern_mapping['Other']))
             data['age_intake_months'] = pd.to_numeric(data['age_intake_months'], errors='coerce')
 
-            data = data.dropna()
+            # data = data.dropna()
 
-            required_columns = ['age_intake_months', 'intake_type_encoded', 'intake_condition_encoded','CoatColor_encoded', 'breed_encoded'   ]
+            required_columns = ['age_intake_months', 'intake_type_encoded', 'intake_condition_encoded','CoatColor_encoded','CoatPattern_encoded', 'breed_encoded'   ]
             if not all(column in data.columns for column in required_columns):
                 st.error("The uploaded CSV is missing one or more required columns.")
             else:
