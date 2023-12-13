@@ -16,6 +16,8 @@ Project Details
 ===
 ![Furrever Stay (1)](https://hackmd.io/_uploads/B1M6_5LHT.png)
 
+[**Watch our project's video!**](https://youtu.be/3uJQ3IKzqOc)
+
 <h2><b></b>Our motto is "No cat should be left without a loving home or end up being euthanized!"</b></h2>
 
 ## Table of Contents
