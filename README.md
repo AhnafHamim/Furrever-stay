@@ -206,8 +206,8 @@ Currently, our system allows users to input the characteristics of a single cat 
 We are also planning to develop PawStay, which will be focused on dogs.
 
 ## Project Review and Feedback
-**Feed Back Form:** [Link](https://forms.gle/x3aXFBEivjzpbfEq8)<br>
-**See Previous Reviews:** [Link](https://docs.google.com/spreadsheets/d/1WqtQEKTo0lP-vFTR447fsURatLueAe8r4adIjMUvt0o/edit?usp=sharing)
+**Feed Back Form:** [Click here](https://forms.gle/x3aXFBEivjzpbfEq8)<br>
+**See Previous Reviews:** [Click here](https://docs.google.com/spreadsheets/d/1WqtQEKTo0lP-vFTR447fsURatLueAe8r4adIjMUvt0o/edit?usp=sharing)
 
-license Furrever Stay
+**license Furrever Stay:** [Click here](LICENCE.txt)
 
