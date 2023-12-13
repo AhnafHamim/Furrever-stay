@@ -1,4 +1,4 @@
-# team-3
+# Furrever Stay
 **Link to live demo:** [link](https://furrever-stay.streamlit.app/)
 
 **Link to dataset:** [Austin Animal Center Intakes](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/about_data) |
