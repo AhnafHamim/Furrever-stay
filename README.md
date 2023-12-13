@@ -12,7 +12,7 @@
 **Link to Project Documentation:** [link](https://docs.google.com/document/d/10uG2zbPJXFRg6SaWjSMh_QIm3TamC7SHQGCQRTtZPU0/edit?usp=sharing)
 
 
-Furrever Stay
+Project Details
 ===
 ![Furrever Stay (1)](https://hackmd.io/_uploads/B1M6_5LHT.png)
 
