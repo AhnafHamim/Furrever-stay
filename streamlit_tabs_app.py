@@ -193,7 +193,7 @@ def main():
         st.header("CSV-based Prediction")
         st.subheader("Accepted CSV Format Example:")
         st.text("Your CSV file should match the following format:")
-        st.image("./new_streamlit_app/Sample CSV Layout.png", caption='CSV Format Example')
+        st.image("./initial_work/new_streamlit_app/Sample CSV Layout.png", caption='CSV Format Example')
 
         st.subheader("Expected Values for Each Column:")
         st.write("Intake Type:", ', '.join(intake_type_mapping.keys()))
