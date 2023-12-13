@@ -189,16 +189,18 @@ Data-->Model_makes_prediction;
 Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
 
 ```
-The user will input the characteristics of the cat by using the drop-down menu on the website
+The user will input the characteristics of the cat by using the drop-down menu on the website.
+After inputting the characteristics, the website will give the user a prediction of how long the cat will stay.
 
 
 ![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
 
 
-After inputting the characteristics, the website will give the user a prediction of how long the cat will stay
-
-
 ![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
+
+
+![csvfeature](https://github.com/AhnafHamim/team-3/assets/83092931/502f2e7d-95f0-4536-bde8-e5827a518b0f)
+
 
 ## Future Features
 Currently, our system allows users to input the characteristics of a single cat for analysis. However, our future objective is to enhance the functionality to process datasets provided by users, such as Excel files in CSV format, enabling the system to generate predictions and insights for multiple cats simultaneously. This expansion will offer users a more efficient experience.
