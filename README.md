@@ -209,5 +209,5 @@ We are also planning to develop PawStay, which will be focused on dogs.
 **Feed Back Form:** [Click here](https://forms.gle/x3aXFBEivjzpbfEq8)<br>
 **See Previous Reviews:** [Click here](https://docs.google.com/spreadsheets/d/1WqtQEKTo0lP-vFTR447fsURatLueAe8r4adIjMUvt0o/edit?usp=sharing)
 
-**license Furrever Stay:** [Click here](LICENCE.txt)
+**license Furrever Stay:** [Click here](LICENCE)
 
