@@ -203,7 +203,7 @@ After inputting the characteristics, the website will give the user a prediction
 
 
 ## Future Features
-Currently, our system allows users to input the characteristics of a single cat for analysis. However, our future objective is to enhance the functionality to process datasets provided by users, such as Excel files in CSV format, enabling the system to generate predictions and insights for multiple cats simultaneously. This expansion will offer users a more efficient experience.
+We are currently in the process of developing a dynamic model that adapts and undergoes training using the CSV file of each individual shelter. This innovative feature aims to streamline operations for shelters by enabling the system to predict and seamlessly integrate with the unique trends and record-keeping formats of each shelter. In essence, our model will be designed to enhance efficiency by customizing its learning approach to suit the specific needs and structures of different shelters.
 
 We are also planning to develop PawStay, which will be focused on dogs.
 
