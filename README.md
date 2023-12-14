@@ -194,12 +194,9 @@ Model_makes_prediction-->Predicts_Days_Cat_Will_Stay_at_Shelter;
 The user will input the characteristics of the cat by using the drop-down menu on the website.
 After inputting the characteristics, the website will give the user a prediction of how long the cat will stay.
 
+![gif1](https://github.com/AhnafHamim/team-3/assets/83092931/34f146ed-12ae-45ef-b6c5-95a9fa8770f0)
 
-![Kapture 2023-12-10 at 12 24 33](https://github.com/AhnafHamim/team-3/assets/83092931/0ee13711-2c0f-4592-a4f9-b224a5a0ff3c)
-
-
-![Kapture 2023-12-10 at 12 25 12](https://github.com/AhnafHamim/team-3/assets/83092931/4326e2f1-6071-46e9-8ecd-7ab3e2ac04d8)
-
+![gif2](https://github.com/AhnafHamim/team-3/assets/83092931/5253b931-54c7-4c14-8b08-b6e0cb0de2d0)
 
 ![csvfeature](https://github.com/AhnafHamim/team-3/assets/83092931/502f2e7d-95f0-4536-bde8-e5827a518b0f)
 
